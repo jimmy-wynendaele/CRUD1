@@ -1,0 +1,29 @@
+td,th{
+
+	border-right: 1px solid green;
+	text-align: center; 
+}
+
+table{
+	padding-bottom: 5%;
+	margin: auto;
+}
+
+tr:nth-child(even){
+	background-color: grey;
+}
+
+.clientInfo:nth-child(even){
+	background-color: lightgrey;
+}
+
+.clients{
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.clientInfo{
+	margin-bottom: 2em;
+}
+
