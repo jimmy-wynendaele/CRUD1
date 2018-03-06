@@ -121,7 +121,54 @@
 
 	</table>
 
-	
+	<section class="clients">
+		
+		<?php 
+
+			$spec4 = 'SELECT lastName,firstName,birthDate,card,cardNumber FROM clients';
+			$req4 = $bdd->query($spec4);
+
+			function cardCheck($clientCard){
+					if($clientCard==0){
+						return  'no card';
+					}else{
+						return  'has a card';
+					}
+			}
+
+			function numberCheck($clientCard,$number){
+
+					if($clientCard==0){
+						return  'no card';
+					}else{
+						return  $number;
+					}
+			}
+
+
+			while($fetch4 = $req4->fetch()){
+
+			?>
+
+			<div class="clientInfo">
+				<?php
+					echo "firstname: " . $fetch4['firstName'] . "<br>";
+					echo "lastname: " . $fetch4['lastName'] . "<br>";
+					echo "birthdate: " . $fetch4['birthDate'] . "<br>";
+					echo "fidelity card: " . cardCheck($fetch4['card']) . "<br>";
+					echo "card number: " . numberCheck($fetch4['card'],$fetch4['cardNumber']) . "<br>";
+				?>
+			</div>
+
+		<?php
+
+			}	
+		 ?>
+
+
+
+
+	</section>
 </body>
 </html>
 	

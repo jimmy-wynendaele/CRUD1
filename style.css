@@ -25,5 +25,7 @@ tr:nth-child(even){
 
 .clientInfo{
 	margin-bottom: 2em;
+	padding-right: 2%;
+	padding-left: 2%;
 }
 
